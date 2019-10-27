@@ -53,6 +53,14 @@ public abstract class GameView extends GameObject {
         }
     }
 
+    /**
+     * 为元素设置渐变动画
+     *
+     * @param node
+     * @param millis
+     * @param fromValue
+     * @param toValue
+     */
     public static void makeFadeTransition(Node node, int millis, double fromValue, double toValue) {
         FadeTransition ft = new FadeTransition(Duration.millis(millis));
         ft.setFromValue(fromValue);
@@ -63,6 +71,14 @@ public abstract class GameView extends GameObject {
         ft.play();
     }
 
+    /**
+     * 为元素设置缩放动画
+     *
+     * @param node
+     * @param millis
+     * @param byX
+     * @param byY
+     */
     public static void makeScaleTransition(Node node, int millis, double byX, double byY) {
         ScaleTransition st = new ScaleTransition(Duration.millis(millis));
         st.setByX(byX);
@@ -73,6 +89,14 @@ public abstract class GameView extends GameObject {
         st.play();
     }
 
+
+    /**
+     * 为元素设置旋转动画
+     *
+     * @param node
+     * @param mills
+     * @param byAngle
+     */
     public static void makeRotateTransition(Node node, int mills, double byAngle) {
         RotateTransition rt = new RotateTransition(Duration.millis(mills));
         rt.setByAngle(byAngle);
@@ -81,6 +105,14 @@ public abstract class GameView extends GameObject {
         rt.play();
     }
 
+    /**
+     * 为元素设置旋转动画
+     * @param node
+     * @param mills
+     * @param fromAngle
+     * @param toAngle
+     * @param autoReverse
+     */
     public static void makeRotateTransition(Node node, int mills, double fromAngle, double toAngle, boolean autoReverse) {
         RotateTransition rt = new RotateTransition(Duration.millis(mills));
         rt.setFromAngle(fromAngle);

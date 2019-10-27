@@ -4,7 +4,7 @@ import engine.enumeration.ObjectStatus;
 
 
 public abstract class GameObject {
-    protected ObjectStatus status = ObjectStatus.STOP;
+    protected ObjectStatus status = ObjectStatus.INVISIBLE;
 
     public abstract void update();
 
